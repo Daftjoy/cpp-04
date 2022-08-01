@@ -30,7 +30,7 @@ WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
     std::cout << "Assignement operator for WrongAnimal called" << std::endl;
     this->Name = other.Name;
     this->type = other.type;
-    return (*this);
+    return(*this);
 }
 
 void WrongAnimal::setType(std::string type)

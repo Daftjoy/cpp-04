@@ -1,25 +1,26 @@
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 # include <iostream>
 # include <iomanip>
 # include <limits>
 # include <string>
 # include <cstdlib>
 # include <cmath>
+# include "Brain.hpp"
 
-class WrongAnimal
+class Animal
 {
     protected:
         std::string Name;
         std::string type;
 
     public:
-        WrongAnimal();
-        WrongAnimal(std::string Name, std::string type);
-        WrongAnimal(const WrongAnimal &other);
-        ~WrongAnimal();
+        Animal();
+        Animal(std::string Name, std::string type);
+        Animal(const Animal &other);
+        virtual ~Animal();
 
-        WrongAnimal &operator=(const WrongAnimal &other);
+        Animal &operator=(const Animal &other);
 
         void setType(std::string type);
         void setName(std::string Name);
@@ -27,7 +28,9 @@ class WrongAnimal
         std::string getType() const;
         std::string getName() const;
         
-       void makeSound() const;
+        virtual Brain *getBrain() const;
+
+        virtual void makeSound() const;
 
 };
 

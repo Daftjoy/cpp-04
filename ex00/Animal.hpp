@@ -19,6 +19,8 @@ class Animal
         Animal(const Animal &other);
         virtual ~Animal();
 
+        Animal &operator=(const Animal &other);
+
         void setType(std::string type);
         void setName(std::string Name);
 

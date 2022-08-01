@@ -55,6 +55,11 @@ std::string Animal::getName() const
     return this->Name;
 }
 
+Brain *Animal::getBrain() const
+{
+    std::cout << "This animal has no brain." << std::endl;
+    return (NULL);
+}
 
 void Animal::makeSound() const
 {

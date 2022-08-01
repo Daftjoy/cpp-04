@@ -7,9 +7,12 @@
 # include <cstdlib>
 # include <cmath>
 # include "Animal.hpp"
+# include "Brain.hpp"
 
 class Cat : public Animal
 {
+    private:
+        Brain * brain;
 
     public:
         Cat();
@@ -18,6 +21,10 @@ class Cat : public Animal
         ~Cat();
         
         Cat &operator=(const Cat &other);
+
+        void setBrain(Brain *brain);
+
+        virtual Brain *getBrain() const;
 
         void makeSound() const;
 
